@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <!-- The HEAD is where the "thinking" information of a page lives -->
+        <!-- Its where we inject exteneral sources needed for our page to work properly -->
+        <!-- We can link CSS, Javascript, fonts and so much more -->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+
+        <!-- The title is the text displayed on our browser tab -->
+        <title>Endangered Animals</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+
+                <img src="../images/elephant-icon.png" alt="Elephant Logo" class="logo">
+                <h1 class="title-logo">Endangered Animals</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Top 10 List</a></li>
+                        <li><a class="dropdown-content" href="#">How you can help</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Adopt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="slideshow">
+        <div class="mySlides fade" style="display: block;"><img src="../images/Bonobo.jpg" alt="Bonobo Monkey" style="width: 744px; height: 227px;"></div>
+        <div class="mySlides fade" style="display: none;"><img src="../images/hectors_dolphin.jpg" alt='Dolphin' style="width: 744px; height: 227px;"></div>
+        <div class="mySlides fade" style="display: none;"><img src="../images/sundra_tiger.jpeg" alt="Sundra Tiger" style="width: 744px; height: 227px;"></div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+     </div>
+     <div style="text-align: center;">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+     </div>
+
+     <p>placeholder text</p>
+
+
+         
+    </body>
+
+    <footer>
+    </footer>
+
+    <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+        
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+        
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                     }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
+        </script> 
+</html>
