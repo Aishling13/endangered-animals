@@ -1,15 +1,57 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     background: #222;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     text-align: center;
+    min-height: 100vh; 
+  
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
-p {
+article {
+    padding: 20px;
+}
+
+.logo-text:visited {
+   text-decoration: none;
+   color: #000;
+}
+
+p, h2, h4 {
     color: whitesmoke;
 }
 
+p a {
+    color: #55d6aa;
+}
+
+p a:visited {
+    color: #55d6aa;
+}
+
+.page-text {
+    text-align: left;
+    padding: 0px 50px 15px 50px;
+}
+
+.page-text img {
+    display: block;
+    margin: 0 auto;
+    width: 800px; 
+    height: 350px;
+    object-fit: cover;
+}
+
+.page-text ul {
+    color: whitesmoke;
+}
 .container {
     width: 90%;
     margin: 0 auto;
@@ -30,7 +72,7 @@ header::after {
     height: 110px;
 }
 
-.title-logo {
+.endangered-animals-logo {
     font-family: caesar dressing, arial;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     float: left;
@@ -97,7 +139,11 @@ nav a:hover::before {
 }
 .slideshow {
     margin: auto;
-    margin-top: 20px;
+}
+.slideshow img {
+    width: 800px; 
+    height: 350px;
+    object-fit: cover;
 }
 .prev, .next {
     cursor: pointer;
@@ -105,23 +151,22 @@ nav a:hover::before {
     top: 50%;
     width: auto;
     padding: 50px 16px;
-    margin-top: -100px;
+    margin-top: -200px;
     color: #55d6aa;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
     user-select: none;
+    top: -175px;
   }
   
   .next {
     left: 23%;
-    border-radius: 3px 0 0 3px;
-    top: -120px;
   }
+
   .prev{
       right: 23%;
-      top: -120px;
   }
   
   .prev:hover, .next:hover {
@@ -148,5 +193,69 @@ nav a:hover::before {
     to {opacity: 1}
   }
 
+/* katharine's added changed */
+  footer {
+    background: #55d6aa;
+    width: 100%;
+    padding: 20px 0px;
+}
 
+footer p {
+    color: #444;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
 
+footer a {
+    position: center;
+}
+
+footer img {
+    margin-left: 1em;
+}
+
+h3 {
+    color: whitesmoke;
+    position: left;
+}
+
+/* added image gallery */
+.animal-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+    place-items: center;
+    gap: 15px 15px;
+}
+
+.item{
+    text-align:center;
+    display:block;
+    background-color: #333;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 1px;
+    float:left;
+    width: 100%;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.animal-gallery img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.animal-gallery a {
+    display: block;
+    text-decoration: none;
+}
