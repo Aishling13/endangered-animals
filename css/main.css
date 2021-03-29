@@ -19,6 +19,10 @@ article {
     padding: 20px;
 }
 
+.logo-text {
+   text-decoration: none;
+   color: #000;
+}
 .logo-text:visited {
    text-decoration: none;
    color: #000;
